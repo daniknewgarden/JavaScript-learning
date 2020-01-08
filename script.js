@@ -75,25 +75,10 @@
 //     }
 // }
 
-function first(first, callback) {
-    first = setTimeout( function () {
-        console.log(1);
-    }, 500);
-    callback();
-}
-function second() {
-    console.log(2);
-}
+let appOptions = {
+    name: 'Alex',
+    age: 25,
+    hairColor: 'black'
+};
 
-first(first, second);
-
-function learnJavaScript(lang, callback) {
-    console.log('Я учу' + lang);
-    callback();
-}
-
-    function callback() {
-        console.log('hello world!');
-    }
-
-learnJavaScript('JS', callback); 
+console.log(appOptions);
