@@ -1,0 +1,59 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.block {
+    animation-name: boom;
+    animation-duration: .5s;
+    display: none;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    transition: all 3s;
+}
+#square {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+}
+.round {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: blue;
+}
+button {
+    width: 50px;
+    height: 25px;
+    background-color: #fff;
+}
+.active{
+    animation-duration: 3s;
+    animation-name: lol;
+    display: block;
+    transition: all 3s;
+}
+@keyframes lol {
+    from{
+        width: 50px;
+        height: 50px;
+    }
+    to{
+        width: 300px;
+        height: 300px;
+    }
+}
+@keyframes boom{
+    from{
+        width: 300px;
+        height: 300px;
+    }
+    to {
+        width: 50px;
+        height: 50px;
+    }
+}
