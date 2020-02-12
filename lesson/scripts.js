@@ -1,4 +1,4 @@
-let btn = document.querySelectorAll('button');
+// let btn = document.querySelectorAll('button');
 
 // btn[0].onclick = function() {
 //     alert('You was clicked on button');
@@ -20,8 +20,10 @@ let btn = document.querySelectorAll('button');
 //     console.log('Произошло событые ' + event.type + ' на элементе ' + target);
 // });
 
-btn.forEach(function (item) {
-   item.addEventListener('mouseleave', function (params) {
-       console.log('moudeleave');
-   });
-});
+// btn.forEach(function (item) {
+//    item.addEventListener('mouseleave', function (params) {
+//        console.log('moudeleave');
+//    });
+// });
+
+alert([] + false - null + true);

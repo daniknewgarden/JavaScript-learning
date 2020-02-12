@@ -1,42 +1,50 @@
+let startBtn = document.querySelector('#start'),
+    budgetValue = document.querySelector('.budget-value'),
+    dayBudgetValue = document.querySelector('.daybudget-value'),
+    levelValue = document.querySelector('.level-value'),
+    expensesValue = document.querySelector('.expenses-value'),
+    optionalExpensesValue = document.querySelector('.optionalexpenses-value'),
+    incomeValue = document.querySelector('.income-value'),
+    mounthSavingsValue = document.querySelector('.mounthsavings-value'),
+    yearSavingsValue = document.querySelector('.yearsavings-value'),
+
+
+    expensesItem = document.querySelector('.expenses-item'),
+    expensesBtn = document.getElementsByTagName('button')[0],
+    optionalExpensesBtn = document.getElementsByTagName('button')[1],
+    countBtn = document.getElementsByTagName('button')[2],
+	optionalExpensesItem = document.querySelectorAll('.optionalexpenses-item'),
+	incomeItem = document.querySelector('.choose-income'),
+	checkSavings = document.querySelector('#savings'),
+	sum = document.querySelector('.choose-sum'),
+    percent = document.querySelector('.choose-percent'),
+    dayValue = document.querySelector('.day-value'),
+    mounthValue = document.querySelector('.mounth-value'),
+    yearValue = document.querySelector('.year-value');
+
 let money, time;
 
-let btn = document.querySelector('#start'),
-    budget = document.querySelector('.budget-value'),
-    dayBudget = document.querySelector('.daybudget-value'),
-    level = document.querySelector('.level-value'),
-    expenses = document.querySelector('.expenses-value'),
-    optionalExpenses = document.querySelector('.optionalexpenses-value'),
-    income = document.querySelector('.income-value'),
-    mounthSavings = document.querySelector('.mounthsavings-value'),
-    yearSavings = document.querySelector('.yearsavings-value');
+let unActiveBtn = document.getElementsByTagName('button');
 
-let expensesItem = document.querySelector('.expenses-item'),
-	expensesBtn = document.getElementsByTagName('button'),
-	optionalExpensesItem = document.querySelectorAll('.optionalexpenses-item');
-
-let optionalIncome = {
-	chooseIncome: document.querySelector('.choose-income'),
-	checkSavings: document.querySelector('#savings'),
-	sum: document.querySelector('.choose-sum'),
-	percent: document.querySelector('.choose-percent')
+for (let i = 0; i < 3; i++) {
+    unActiveBtn[i].style.opacity = '0.5';
 };
 
-setTimeout(() => {
-    console.log(optionalIncome.percent.value);
-}, 3000);
+startBtn.addEventListener('click', function () {
+    money = +prompt("Ваш бюджет на месяц?", "");
+    time = prompt("Введите дату в формате YYYY-MM-DD", "");
 
-// console.log(optionalExpensesItem);
-    
+    while (isNaN(money) || money == "" || money == null) {
+        money = +prompt("Ваш бюджет на месяц?", "");
+    }
 
-// function data() {
-//     money = +prompt("Ваш бюджет на месяц?", "");
-//     time = prompt("Введите дату в формате YYYY-MM-DD", "");
+    for (let i = 0; i < 3; i++) {
+        unActiveBtn[i].style.opacity = '1';
+    };
+});
 
-//     while (isNaN(money) || money == "" || money == null) {
-//         money = +prompt("Ваш бюджет на месяц?", "");
-//     }
-// }
-// data();
+// appData.budget = money;
+// appData.timeData = time;
 
 // let appData = {
 //     budget: money,
